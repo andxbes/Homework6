@@ -12,9 +12,12 @@
                             $("#outGetJson").html("error: " + textStatus + " <br> "+ errorThrown);
                         },
             success: function (data,textStatus,jqXHR){
-                KEY  = "name";
-                var outData = "GET" + KEY + ": " + data[KEY];
-                $("#outGetJson").html(outData);
+                    var key = ["name", "address", "phone"];
+                    var outData ="";
+                    for (var k in key){
+                        outData += "GET " + key[k] + ": " + data[key[k]] + "</br>";
+                    }
+                    $("#outGetJson").html(outData);
             }
         });
     }
@@ -33,7 +36,7 @@
 
 <div>
 <input type="submit" value="GetJson" name="GetJson" onclick="getJson()" />
-<a id="outGetJson"> </a>
+<p id="outGetJson"> </p>
 </div>
 
     

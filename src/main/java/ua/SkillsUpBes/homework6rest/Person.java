@@ -16,6 +16,7 @@ import javax.ws.rs.core.MediaType;
  */
 @Path("/persone")
 public class Person {
+    private static Person persone ;
 
     private String name ,
 	           address ,
@@ -26,12 +27,15 @@ public class Person {
 	name = "Empty";
 	address = "Empty";
         phone = "Empry";
+	
     }
     public Person(String name ,String address,String phone) {
 	this.name = name;
 	this.address = address;
         this.phone = phone;
     }
+    
+    
 
     /**
      * @return the name
@@ -53,14 +57,14 @@ public class Person {
      * @return the address
      */
     
-    public String getAdress() {
+    public String getAddress() {
 	return address;
     }
 
     /**
      * @param adress the address to set
      */
-    public void setAdress(String adress) {
+    public void setAddress(String adress) {
 	this.address = adress;
     }
 
@@ -84,7 +88,7 @@ public class Person {
     @Path("/show")
     @Produces(MediaType.TEXT_PLAIN)
     public String show(){
-         return (getAdress()+"\n"+ getName()+"\n"+ getPhone() + "\n");
+         return (getAddress()+"\n"+ getName()+"\n"+ getPhone() + "\n");
     }
     
     //call the default path "/persone"
@@ -98,10 +102,10 @@ public class Person {
     @GET
     @Path("/getP")
     @Produces(MediaType.APPLICATION_JSON)
-    public Person getPerson(){
+    public static Person getPerson(){
 	Person p;
-	//p = this;
-	p = new Person("Вася Пупкин", "New-York", "102");
+	//p = persone;
+        p = new Person("Вася Пупкин", "New-York", "102");
         return p;  
     }
     
