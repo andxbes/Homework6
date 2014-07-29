@@ -9,7 +9,7 @@
             url: "webresources/persone/getP",
             dataType: 'json',
             error: function (jqXHR, textStatus, errorThrown) {
-                            $("#outGetJson").html("error: " + textStatus + " \n "+ errorThrown);
+                            $("#outGetJson").html("error: " + textStatus + " <br> "+ errorThrown);
                         },
             success: function (data,textStatus,jqXHR){
                 KEY  = "name";
@@ -29,6 +29,7 @@
 <p><a href="webresources/persone/show">Persone resource "persone/show"</a></p>
 <p><a href="webresources/persone">Persone resource (to default)</a></p>
 <p><a href="webresources/persone/getP">getP (Person Object)</a></p>
+<p><a href="webresources/persone/getArray">getArray (String array)</a></p>
 
 <div>
 <input type="submit" value="GetJson" name="GetJson" onclick="getJson()" />

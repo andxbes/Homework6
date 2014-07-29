@@ -104,4 +104,13 @@ public class Person {
 	p = new Person("Вася Пупкин", "New-York", "102");
         return p;  
     }
+    
+    @GET
+    @Path("/getArray")
+    @Produces(MediaType.APPLICATION_JSON)
+    public String[] getArray(){
+	
+	String[] array = {"Вася Пупкин", "New-York", "102"};
+        return array;  
+    }
 }
