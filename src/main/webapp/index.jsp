@@ -9,7 +9,7 @@
             url: "webresources/persone/getP",
             dataType: 'json',
             error: function (jqXHR, textStatus, errorThrown) {
-                            $("#outGetJson").html("error: " + textStatus);
+                            $("#outGetJson").html("error: " + textStatus + "  "+ errorThrown);
                         },
             success: function (data,textStatus,jqXHR){
                 KEY  = "name";

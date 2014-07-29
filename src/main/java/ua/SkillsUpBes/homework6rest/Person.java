@@ -100,8 +100,8 @@ public class Person {
     @Produces(MediaType.APPLICATION_JSON)
     public Person getPerson(){
 	Person p;
-	p = this;
-	//p = new Person("Вася Пупкин", "New-York", "102");
+	//p = this;
+	p = new Person("Вася Пупкин", "New-York", "102");
         return p;  
     }
 }
