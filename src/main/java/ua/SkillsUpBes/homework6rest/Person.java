@@ -22,7 +22,7 @@ public class Person {
 	           phone ;
 
 
-    public Person() {
+    public  Person() {
 	name = "Empty";
 	address = "Empty";
         phone = "Empry";
