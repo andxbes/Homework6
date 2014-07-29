@@ -5,16 +5,11 @@
  */
 package ua.SkillsUpBes.homework6rest;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
-
 /**
  *
  * @author Andr
  */
-@Path("/persone")
+
 public class Person {
     private static Person persone ;
 
@@ -83,38 +78,5 @@ public class Person {
 	this.phone = phone;
     }
     
-    // call the path "/persone/show" 
-    @GET
-    @Path("/show")
-    @Produces(MediaType.TEXT_PLAIN)
-    public String show(){
-         return (getAddress()+"\n"+ getName()+"\n"+ getPhone() + "\n");
-    }
-    
-    //call the default path "/persone"
-    @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public String show2(){
-         return show();
-    }
-    
-    //return json type 
-    @GET
-    @Path("/getP")
-    @Produces(MediaType.APPLICATION_JSON)
-    public static Person getPerson(){
-	Person p;
-	//p = persone;
-        p = new Person("Вася Пупкин", "New-York", "102");
-        return p;  
-    }
-    
-    @GET
-    @Path("/getArray")
-    @Produces(MediaType.APPLICATION_JSON)
-    public String[] getArray(){
-	
-	String[] array = {"Вася Пупкин", "New-York", "102"};
-        return array;  
-    }
+  
 }
