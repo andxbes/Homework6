@@ -49,7 +49,7 @@
         <dependency>
             <groupId>com.owlike</groupId>
             <artifactId>genson</artifactId>
-            <version>0.98</version>
+            <version>0.99</version>
         </dependency>
         <!--    /////////////////    -->
         <dependency>

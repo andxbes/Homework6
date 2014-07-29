@@ -2,7 +2,7 @@
     <script src="http://code.jquery.com/jquery-2.1.1.js"></script>
 
 
-<!--    <script> 
+    <script> 
     function getJson(){
         $.ajax({
             type: 'GET',
@@ -12,14 +12,14 @@
                             $("#outGetJson").html("error: " + textStatus);
                         },
             success: function (data,textStatus,jqXHR){
-                KEY  = "phone";
+                KEY  = "name";
                 var outData = "GET" + KEY + ": " + data[KEY];
                 $("#outGetJson").html(outData);
             }
         });
     }
     
-    </script>-->
+    </script>
     
 <body>
 <h2>Jersey RESTful Web Application!</h2>
