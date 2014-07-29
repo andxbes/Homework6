@@ -21,9 +21,7 @@ public class Person {
 	           address ,
 	           phone ;
 
-    /**
-     * @return the name
-     */
+
     public Person() {
 	name = "Empty";
 	address = "Empty";
