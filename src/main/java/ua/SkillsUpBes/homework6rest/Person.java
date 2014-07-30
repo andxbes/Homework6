@@ -21,7 +21,7 @@ public class Person {
     public  Person() {
 	name = "Empty";
 	address = "Empty";
-        phone = "Empry";
+        phone = "Empty";
 	
     }
     public Person(String name ,String address,String phone) {

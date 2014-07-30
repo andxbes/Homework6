@@ -20,8 +20,26 @@
                     $("#outGetJson").html(outData);
             }
         });
-    }
-    
+    };
+    </script>
+    <script>
+        function postJson(){
+        var dataSend = $("#inputData").html();
+        $.ajax({
+            type:'POST',
+            url:'webresources/persone/savePerson',
+            dataType: 'html',
+            headers: {'Content-Type': 'application/json'},
+            data : dataSend,
+            error: function (jqXHR,textStatus,errorThrown){
+                alert("error : " + textStatus);
+            },
+            success: function (data,textStatus,jqXHR){
+                $("#outPostJson").html(data);
+            }
+            
+        });
+    };
     </script>
     
 <body>
@@ -39,6 +57,12 @@
 <p id="outGetJson"> </p>
 </div>
 
+
+<div>
+<p id="inputData"> {"name":"Andrey"}</p>
+<input type="submit" value="PostJson" name="PostJson" onclick="postJson()" />
+<p id="outPostJson"> </p>
+</div>
     
 
 </body>
